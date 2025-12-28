@@ -1,0 +1,385 @@
+/* Genel arka plan */
+.app {
+  min-height: 100vh;
+  background: #050505;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Ortalanmış shell */
+.app-shell {
+  /* max-width: 1440px; */  /* BU SATIRI SİL veya yorum satırı yap */
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 32px 48px;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.app-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.header-status {
+  font-size: 13px;
+  color: #cccccc;
+}
+
+/* GRID LAYOUT */
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+  gap: 24px;
+}
+
+/* PANELS */
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* CARD */
+.card {
+  background: #111;
+  border-radius: 14px;
+  padding: 14px 16px 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid #222;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-badge {
+  font-size: 11px;
+  background: #1f1f1f;
+  border-radius: 999px;
+  padding: 3px 10px;
+  border: 1px solid #2f2f2f;
+  color: #d0d0d0;
+}
+
+.card-hint {
+  font-size: 11px;
+  color: #8a8a8a;
+}
+
+.card-body {
+  margin-top: 4px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cfcfcf;
+  margin-bottom: 6px;
+}
+
+/* FORM */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.input {
+  background: #181818;
+  border-radius: 8px;
+  border: 1px solid #333;
+  color: #f5f5f5;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3ba4ff;
+}
+
+/* BUTTONS */
+.btn {
+  border-radius: 999px;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  font-size: 13px;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #262626;
+  border-color: #555;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-secondary {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.btn-secondary:hover {
+  background: #059669;
+  border-color: #059669;
+}
+
+/* ALGO BUTTONS */
+.algo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* CODE BLOCKS */
+.code-block {
+  background: #000;
+  border-radius: 8px;
+  border: 1px solid #222;
+  padding: 8px 10px;
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 11px;
+  color: #00ff66;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.code-block-large {
+  max-height: 360px;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.table th,
+.table td {
+  padding: 4px 8px;
+  border-bottom: 1px solid #262626;
+}
+
+.table th {
+  text-align: left;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.table td {
+  color: #d4d4d4;
+}
+
+/* GRAPH WRAPPER */
+.graph-wrapper {
+  overflow: auto;
+  padding: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .app-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+ 
+/* ... senin mevcut App.css'in üst kısımları aynı kalsın ... */
+
+/* card-body içeriğinde kullanılan daha küçük code-block */
+.code-block-small {
+  max-height: 140px;
+}
+
+/* Graph için biraz daha geniş alan bırak */
+.graph-wrapper {
+  overflow: auto;
+  padding: 4px;
+  max-height: 420px;
+}
+
+/* Nodes + Edges yan yana grid */
+.panel-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+/* Edges formu 3 kolon (from, to, button) */
+.form-row-edges {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+}
+
+/* 1024 altı tek kolona düş */
+@media (max-width: 1024px) {
+  .app-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    align-items: flex-start;
+  }
+
+  .panel-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* küçük code-block */
+.code-block-small {
+  max-height: 140px;
+}
+
+/* Graph için alan */
+.graph-wrapper {
+  overflow: auto;
+  padding: 4px;
+  max-height: 420px;
+}
+
+/* Nodes + Edges yan yana grid */
+.panel-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+/* Edges formu 3 kolon (from, to, button) */
+.form-row-edges {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+}
+
+/* Algorithm açıklaması */
+.algo-hint {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+/* Output header & toggle */
+.card-header-output {
+  align-items: center;
+}
+
+.output-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.chip {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #e5e5e5;
+  cursor: pointer;
+}
+
+.chip-active {
+  border-color: #3b82f6;
+  background: #1d4ed8;
+}
+
+/* RESPONSIVE UPDATE */
+@media (max-width: 1024px) {
+  .app-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    align-items: flex-start;
+  }
+
+  .panel-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
