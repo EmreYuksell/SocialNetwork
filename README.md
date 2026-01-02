@@ -63,25 +63,34 @@ npm run dev
 cd frontend
 npm install
 npm run dev
-
-
 ```
-social-network-analyzer/
-│
-├── backend/
-│   ├── src/
-│   │   ├── algorithms/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── services/
-│   └── data/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── api/
-│   │   └── types/
-│
-└── README.md
 
+## 📁 Proje Yapısı
+
+```text
+social-network-analyzer/
+├─ backend/
+│  ├─ src/
+│  │  ├─ algorithms/
+│  │  ├─ models/
+│  │  ├─ routes/
+│  │  └─ services/
+│  ├─ data/
+│  │  └─ graph.json
+│  ├─ package.json
+│  └─ tsconfig.json
+│
+├─ frontend/
+│  ├─ src/
+│  │  ├─ api/
+│  │  ├─ components/
+│  │  ├─ types/
+│  │  ├─ App.tsx
+│  │  └─ main.tsx
+│  ├─ index.html
+│  ├─ package.json
+│  └─ vite.config.ts
+│
+├─ .gitignore
+└─ README.md
 
